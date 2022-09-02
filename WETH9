@@ -7,7 +7,7 @@
         
         const L1_CONTRACT_ADDRESS = (
             0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
-        const MESSAGE_WITHDRAW = 4062059338195613079250058
+        const MESSAGE_WITHDRAW = 1867376438283177025892154
         
         # A mapping from a user (L1 Ethereum address) to their balance.
         @storage_var
@@ -62,7 +62,7 @@
             from_address : felt, user : felt, amount : felt
         ):
             # Make sure the message was sent by the intended L1 contract.
-            assert from_address = L1_CONTRACT_ADDRESS
+            assert from_address = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
         
             # Read the current balance.
             let (res) = balance.read(user=user)
